@@ -1,0 +1,195 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+  <head>
+    <title>Survey Form</title>
+  </head>
+  <style>
+    body{
+      font-family: 'Righteous', monospace;
+      color: Brown;
+    }
+    .bg {
+      background:linear-gradient(90deg,LightBlue,DodgerBlue,Violet,DarkViolet);
+    }
+    #title{
+      position: relative;
+      top: 0%;
+      left: 0%;
+      text-align: center;
+    }
+    h1{
+      font-size: 2.5em;
+    }
+    #description{
+      font-size: 1.75em;
+      text-align:center;
+      color: white;
+    }
+    #survey-form{
+      background: Navy;
+      opacity: 60%;
+      height: 270vmin;
+      width: 92vmin;
+      margin: auto;
+      color: white;
+      padding: 20px 18px 10px 10px;
+      font-size: 1.5em;
+    }
+    input{
+      box-sizing: border-box;
+      box-radius: 25%;
+      height: 7%;
+      width: 50%;
+      margin-top: 10px;
+      width: 100%;
+    }
+    input[type="text"]{
+      transition: width 0.4s fade-out;
+      background-color:LightBlue;
+      color: DarkBlue;
+      font-size: .8em;
+      font-family:'Righteous', cursive;
+      font-opacity:100%;
+    }
+    input[type="email"]{
+      transition: width 0.4s fade-out;
+      background-color:LightBlue;
+      color: DarkBlue;
+      font-size: .8em;
+      font-family:'Righteous', cursive;
+      font-opacity:100%;
+    }
+    input[type="number"]{
+      transition: width 0.4s fade-out;
+      background-color:LightBlue;
+      color: DarkBlue;
+      font-size: .8em;
+      font-family:'Righteous', cursive;
+      font-opacity:100%;
+    }
+    div{
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+    select{
+      transition: width 0.4s fade-out;
+      box-sizing: border-box;
+      box-radius: 25%;
+      height: 35px;
+      width: 270px;
+      margin-top: 10px;
+      width: 51%;
+      font-family:'Righteous', cursive;
+      font-opacity:100%;
+      font-size: .8em;
+      background-color:LightBlue;
+      color: DarkBlue;
+    }
+    #radios{
+      height: 20px;
+      width: 20px !important;
+      margin-left: 20px;
+    }
+    #checks{
+      height: 20px;
+      width: 20px !important;
+      margin-left: 20px;
+    }
+    textarea{
+      margin-left: 20px;
+      margin-top: 5px;
+      font-size: .8em;
+      font-family:'Righteous', cursive;
+      width: 92%;
+      background-color:LightBlue;
+      color: DarkBlue;
+    }
+    #submit{
+      float: right;
+      margin-right: 21px;
+      margin-top: 10px;
+      font-size: .8em;
+      font-family:'Righteous', cursive;
+      background-color:LightBlue;
+      color: DarkBlue;
+    }
+    footer{
+      font-size: 1.2em;
+      font-family:'Righteous', cursive;
+      background-color:white;
+      color: DarkBlue;
+      position: relative;
+      height: 10%;
+      top:85%;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+  <body class="bg">
+    <h1 id="title">Gadgets Survey </h1>
+    <p id="description">
+      Thanks for choosing us!<br>
+      Please give us a minute to complete the survey.
+    </p>
+    <form id="survey-form">
+      <div>
+      <label for="#name" id="name-label">Name:&nbsp;<br>
+        <input type="text" id="name" placeholder="Enter Your Name" name="name" required></label>
+      <label for="#email" id="email-label">
+        <h4>
+          Email:&nbsp;
+          <input type="email" id="email" placeholder="Enter Your Email" name="email" required>
+        </h4>
+      </label>
+      <label for="#number" id="number-label">
+        <h4>
+          Age:&nbsp;
+          <input type="number" id="number" min="10" max="99" placeholder="Select Your Age" required>
+        </h4>
+      </label>
+          <label for="#dropdown">
+            Gender:
+          </label>&nbsp;
+          <select id="dropdown" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="na">Prefer not to say</option>
+          </select>
+        <br><br>
+          <label for="#programmer">
+            Are You a Programmer?
+          </label>
+          <br>
+          <input type="radio" name="coder" value="Yes" id="radios" checked>
+          <label for="Yes">Yes</label>
+          <input type="radio" name="coder" value="No" id="radios">
+          <label for="No">No</label>
+        <br><br>
+          <label for="#gadgets">
+            Which of the Gadgets do you own?
+          </label>
+          <br>
+          <input type="checkbox" name="gadget" value="Smartphone" id="checks">
+          <label for="Smartphone">Smartphone</label>
+          <br>
+          <input type="checkbox" name="gadget" value="Tablet" id="checks">
+          <label for="Tablet">Tablet</label><br>
+          <input type="checkbox" name="gadget" value="Laptop" id="checks">
+          <label for="Laptop">Laptop</label><br>
+          <input type="checkbox" name="gadget" value="Desktop" id="checks">
+          <label for="Desktop">Desktop</label>
+        <br><br>
+          <label for="#text-field">
+            Enter your Comments (if any) :
+          </label><br>
+        <textarea placeholder="Type Here.." id="field-input" name="field" rows="6" cols="15"></textarea>
+      </div>
+      <button value="Submit" id="submit">Submit</button>
+    </form>
+    </body>
+    <footer>
+      This page has been designed by <a href="https://github.com/soham-sarkar" target="_blank">Soham Sarkar</a> as part of the Responsive Website Design project on <a href="https://www.freecodecamp.com" target="_blank">FreeCodeCamp</a> &copy; 2020.
+    </footer>
+</html>     
